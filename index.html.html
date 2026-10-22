@@ -1,0 +1,142 @@
+html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sổ Tay Quản Lý Học Tập & Tác Phong Tổ</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px; color: #333; }
+        .container { max-width: 1150px; margin: 0 auto; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { text-align: center; color: #3f51b5; margin-bottom: 5px; font-size: 26px; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 25px; font-size: 14px; }
+        .main-nav { display: flex; justify-content: center; gap: 15px; margin-bottom: 25px; border-bottom: 1px solid #ddd; padding-bottom: 15px; }
+        .nav-btn { padding: 10px 20px; border: 1px solid #ddd; background: #fff; border-radius: 6px; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 14px; color: #555; transition: 0.2s; }
+        .nav-btn.active, .nav-btn:hover { background: #3f51b5; color: white; border-color: #3f51b5; }
+        .alert-box { background-color: #fffde7; border-left: 4px solid #fbc02d; padding: 12px 15px; border-radius: 4px; font-size: 13px; color: #e65100; margin-bottom: 20px; line-height: 1.5; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background-color: #f8f9fa; color: #555; font-weight: 600; font-size: 14px; }
+        td { font-size: 14px; }
+        input[type="text"], input[type="number"] { width: 90%; padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 13px; background-color: #fafafa; }
+        input[type="text"]:focus, input[type="number"]:focus { border-color: #3f51b5; background-color: #fff; outline: none; }
+        .tongdiem-input { font-weight: bold; color: #2e7d32 !important; background-color: #e8f5e9 !important; text-align: center; }
+        .note-input { background-color: #fffdec !important; color: #c62828; font-weight: 500; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Sổ Tay Quản Lý Học Tập & Tác Phong Tổ</h1>
+    <div class="subtitle">Theo dõi sát sao nề nếp rèn luyện, lỗi sai, điểm cộng và điểm trừ của các thành viên</div>
+
+    <div class="main-nav">
+        <button class="nav-btn active">📊 Điểm Số & Đánh Giá Tổ</button>
+        <button class="nav-btn">📅 Lịch Trực Nhật</button>
+        <button class="nav-btn">📝 Phân Công Bài Tập</button>
+    </div>
+
+    <div class="alert-box">
+        💡 <b>Cách dùng:</b> Tất cả các cột bao gồm cả cột <b>Tổng Điểm</b> đều đã được mở thành ô trống để bạn và các thành viên thoải mái tự tay nhập dữ liệu vào trực tiếp nhé!
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 5%; text-align: center;">STT</th>
+                <th style="width: 22%;">Họ và Tên Thành Viên</th>
+                <th style="width: 18%;">Điểm Tác Phong & Rèn Luyện</th>
+                <th style="width: 12%;">Điểm Cộng (+)</th>
+                <th style="width: 12%;">Điểm Trừ (-)</th>
+                <th style="width: 12%; text-align: center;">Tổng Điểm</th>
+                <th style="width: 19%;">Ghi chú cụ thể (Lỗi sai, lý do cộng trừ...)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: center;">1</td>
+                <td><b>Mai Nguyễn Kim An</b></td>
+                <td><input type="text" placeholder="Nhập điểm rèn luyện"></td>
+                <td><input type="text" placeholder="Điểm cộng"></td>
+                <td><input type="text" placeholder="Điểm trừ"></td>
+                <td><input type="text" class="tongdiem-input" placeholder="Tự nhập tổng"></td>
+                <td><input type="text" class="note-input" placeholder="Nhập lỗi sai, lý do..."></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">2</td>
+                <td><b>Đào Nhã Đan</b></td>
+                <td><input type="text" placeholder="Nhập điểm rèn luyện"></td>
+                <td><input type="text" placeholder="Điểm cộng"></td>
+                <td><input type="text" placeholder="Điểm trừ"></td>
+                <td><input type="text" class="tongdiem-input" placeholder="Tự nhập tổng"></td>
+                <td><input type="text" class="note-input" placeholder="Nhập lỗi sai, lý do..."></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">3</td>
+                <td><b>Nguyễn Công Vinh</b></td>
+                <td><input type="text" placeholder="Nhập điểm rèn luyện"></td>
+                <td><input type="text" placeholder="Điểm cộng"></td>
+                <td><input type="text" placeholder="Điểm trừ"></td>
+                <td><input type="text" class="tongdiem-input" placeholder="Tự nhập tổng"></td>
+                <td><input type="text" class="note-input" placeholder="Nhập lỗi sai, lý do..."></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">4</td>
+                <td><b>Nguyễn Minh Khôi</b></td>
+                <td><input type="text" placeholder="Nhập điểm rèn luyện"></td>
+                <td><input type="text" placeholder="Điểm cộng"></td>
+                <td><input type="text" placeholder="Điểm trừ"></td>
+                <td><input type="text" class="tongdiem-input" placeholder="Tự nhập tổng"></td>
+                <td><input type="text" class="note-input" placeholder="Nhập lỗi sai, lý do..."></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">5</td>
+                <td><b>Nguyễn Minh Khánh</b></td>
+                <td><input type="text" placeholder="Nhập điểm rèn luyện"></td>
+                <td><input type="text" placeholder="Điểm cộng"></td>
+                <td><input type="text" placeholder="Điểm trừ"></td>
+                <td><input type="text" class="tongdiem-input" placeholder="Tự nhập tổng"></td>
+                <td><input type="text" class="note-input" placeholder="Nhập lỗi sai, lý do..."></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">6</td>
+                <td><b>Ngô Đoan Trang</b></td>
+                <td><input type="text" placeholder="Nhập điểm rèn luyện"></td>
+                <td><input type="text" placeholder="Điểm cộng"></td>
+                <td><input type="text" placeholder="Điểm trừ"></td>
+                <td><input type="text" class="tongdiem-input" placeholder="Tự nhập tổng"></td>
+                <td><input type="text" class="note-input" placeholder="Nhập lỗi sai, lý do..."></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">7</td>
+                <td><b>Nguyễn Hoàng Sang</b></td>
+                <td><input type="text" placeholder="Nhập điểm rèn luyện"></td>
+                <td><input type="text" placeholder="Điểm cộng"></td>
+                <td><input type="text" placeholder="Điểm trừ"></td>
+                <td><input type="text" class="tongdiem-input" placeholder="Tự nhập tổng"></td>
+                <td><input type="text" class="note-input" placeholder="Nhập lỗi sai, lý do..."></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">8</td>
+                <td><b>Nguyễn Thị Thảo Vy</b></td>
+                <td><input type="text" placeholder="Nhập điểm rèn luyện"></td>
+                <td><input type="text" placeholder="Điểm cộng"></td>
+                <td><input type="text" placeholder="Điểm trừ"></td>
+                <td><input type="text" class="tongdiem-input" placeholder="Tự nhập tổng"></td>
+                <td><input type="text" class="note-input" placeholder="Nhập lỗi sai, lý do..."></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">9</td>
+                <td><b>Nguyễn Thành Nhân</b></td>
+                <td><input type="text" placeholder="Nhập điểm rèn luyện"></td>
+                <td><input type="text" placeholder="Điểm cộng"></td>
+                <td><input type="text" placeholder="Điểm trừ"></td>
+                <td><input type="text" class="tongdiem-input" placeholder="Tự nhập tổng"></td>
+                <td><input type="text" class="note-input" placeholder="Nhập lỗi sai, lý do..."></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
